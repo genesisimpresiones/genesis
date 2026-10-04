@@ -32,6 +32,16 @@ function updateWhatsappLinks() {
   }
 }
 
+// Sello de creacion: contacto de servicios de desarrollo (URL en config.js).
+function updateDevContactLinks() {
+  const devContactUrl = window.GENESIS_DEV_CONTACT_URL;
+  if (!devContactUrl) return;
+  for (const link of document.querySelectorAll('[data-dev-contact]')) {
+    link.href = devContactUrl;
+  }
+}
+updateDevContactLinks();
+
 async function refresh(query = '', page = 1) {
   const requestId = ++state.requestId;
   setLoading(true, query ? t('searching', { query }) : t('loadingCatalog'));
