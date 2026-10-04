@@ -3,9 +3,11 @@ import { GENESIS_CACHED_CATALOG } from './catalog-cache.js';
 import { searchTerms, sortBySearchRelevance } from './search-intent.js';
 
 const API_URL = window.GENESIS_BAMBU_API_URL ?? '/api/catalog';
-// En hosting estatico (github.io) no hay backend: saltear el fetch a /api/catalog y
-// usar el cache local directo. Override manual via window.GENESIS_STATIC_MODE en config.js.
-const STATIC_MODE = window.GENESIS_STATIC_MODE ?? window.location.hostname.endsWith('.github.io');
+// Modo estatico: sin backend real (URL relativa en hosting sin server). Con API remota
+// (Cloudflare Worker) la busqueda es en vivo. Override manual via GENESIS_STATIC_MODE.
+const REMOTE_API = /^https?:\/\//i.test(API_URL);
+const STATIC_MODE =
+  window.GENESIS_STATIC_MODE ?? (!REMOTE_API && window.location.hostname.endsWith('.github.io'));
 const MAX_CACHED_PAGES = 20;
 const pageCache = new Map();
 

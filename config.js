@@ -2,11 +2,11 @@ window.GENESIS_WHATSAPP_NUMBER = "5492644131773";
 window.GENESIS_WHATSAPP_MESSAGE =
   "Hola Genesis, quiero consultar por un trabajo de impresion 3D del catalogo. Puedo pasarles el ID o una imagen de referencia.";
 
-// Local sandbox/server default: /api/catalog proxies configured private providers.
-// Static hosting default: the UI falls back to src/catalog-cache.js or src/catalog-data.js.
-// On *.github.io the UI skips the /api/catalog fetch automatically; force with true/false.
-// window.GENESIS_STATIC_MODE = true;
-window.GENESIS_BAMBU_API_URL = "/api/catalog";
+// Catalogo en vivo: Cloudflare Worker gv-genesis-catalog (backend sin token expuesto,
+// cache edge 10 min). Si cae, la UI cae automaticamente al catalogo local cacheado.
+// En sandbox local con server.mjs, reemplazar por "/api/catalog".
+window.GENESIS_BAMBU_API_URL =
+  "https://gv-genesis-catalog.gentlevanguard.workers.dev/api/catalog";
 
 // Sello de creacion (footer): contacto de servicios de desarrollo de sistemas/aplicaciones.
 window.GENESIS_DEV_CONTACT_URL =
