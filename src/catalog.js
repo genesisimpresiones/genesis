@@ -64,8 +64,9 @@ function filterLocal(query, page) {
     const haystack = `${item.title} ${item.category} ${item.creator ?? ''} ${item.description}`.toLowerCase();
     return words.some((word) => haystack.includes(word));
   });
-  const ranked = sortBySearchRelevance(matches.length ? matches : catalog, query);
-  return ranked.slice((page - 1) * 20, page * 20);
+  // Sin coincidencias -> vacio (la UI muestra el estado "sin resultados").
+  // Devolver el catalogo completo aca hacia creer que la busqueda no filtraba nada.
+  return sortBySearchRelevance(matches, query).slice((page - 1) * 20, page * 20);
 }
 
 function normalizeBambuItems(payload) {

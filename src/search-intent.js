@@ -113,10 +113,15 @@ export function scoreCatalogItem(item, termsOrQuery) {
   return score;
 }
 
+const STOPWORDS = new Set([
+  'de', 'la', 'el', 'en', 'y', 'o', 'para', 'con', 'un', 'una', 'del', 'los', 'las', 'por', 'al',
+  'the', 'for', 'with', 'and', 'of', 'on', 'my', 'or',
+]);
+
 export function searchTerms(query) {
   return expandSearchQuery(query)
     .flatMap((variant) => normalizeText(variant).split(/\s+/))
-    .filter((term) => term.length > 1)
+    .filter((term) => term.length > 1 && !STOPWORDS.has(term))
     .filter((term, index, array) => array.indexOf(term) === index);
 }
 
