@@ -4,6 +4,8 @@ window.GENESIS_WHATSAPP_MESSAGE =
 
 // Local sandbox/server default: /api/catalog proxies configured private providers.
 // Static hosting default: the UI falls back to src/catalog-cache.js or src/catalog-data.js.
+// On *.github.io the UI skips the /api/catalog fetch automatically; force with true/false.
+// window.GENESIS_STATIC_MODE = true;
 window.GENESIS_BAMBU_API_URL = "/api/catalog";
 
 // Sello de creacion (footer): contacto de servicios de desarrollo de sistemas/aplicaciones.

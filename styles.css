@@ -41,7 +41,7 @@ nav a:hover, nav a:focus-visible { color: var(--gold-light); }
 .language-switch button.active { background: var(--orange); color: #080808; }
 main { width: min(1440px, calc(100% - 40px)); margin: 0 auto; }
 
-.hero { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr); gap: clamp(32px, 5vw, 76px); align-items: center; min-height: 590px; padding: clamp(58px, 7vw, 86px) 0; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(8, 8, 8, 0.98) 0%, rgba(8, 8, 8, 0.9) 37%, rgba(8, 8, 8, 0.4) 72%, rgba(8, 8, 8, 0.78) 100%), url('./assets/genesis-hero.png') center / cover; }
+.hero { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr); gap: clamp(32px, 5vw, 76px); align-items: center; min-height: 590px; padding: clamp(58px, 7vw, 86px) 0; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(8, 8, 8, 0.98) 0%, rgba(8, 8, 8, 0.9) 37%, rgba(8, 8, 8, 0.4) 72%, rgba(8, 8, 8, 0.78) 100%), url('./assets/genesis-hero.webp') center / cover; }
 .hero::before { position: absolute; inset: 0; z-index: -1; background: linear-gradient(135deg, rgba(243, 107, 11, 0.12), transparent 35%); content: ""; }
 .hero-copy { max-width: 670px; }
 .eyebrow { margin: 0 0 14px; color: var(--gold-light); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
@@ -59,7 +59,7 @@ h1 span { color: var(--orange); }
 .hero-brand-full { width: 100%; border-radius: 4px; object-fit: contain; }
 
 .catalog-section { position: relative; isolation: isolate; padding: 64px 0 72px; overflow: hidden; }
-.catalog-section::before { position: absolute; inset: 0 -50vw; z-index: -1; background: linear-gradient(90deg, rgba(8, 8, 8, 0.98) 0%, rgba(8, 8, 8, 0.9) 35%, rgba(8, 8, 8, 0.92) 100%), url('./assets/genesis-catalogo.png') center / cover; content: ""; opacity: 0.82; }
+.catalog-section::before { position: absolute; inset: 0 -50vw; z-index: -1; background: linear-gradient(90deg, rgba(8, 8, 8, 0.98) 0%, rgba(8, 8, 8, 0.9) 35%, rgba(8, 8, 8, 0.92) 100%), url('./assets/genesis-catalogo.webp') center / cover; content: ""; opacity: 0.82; }
 .catalog-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
 h2 { margin: 0; font-family: var(--font-display); font-size: clamp(1.65rem, 3vw, 3rem); line-height: 1.1; letter-spacing: 0; text-transform: uppercase; }
 .catalog-note { color: var(--muted); font-size: 0.78rem; }
@@ -111,7 +111,7 @@ input:focus { border-color: var(--orange); }
 .print-visual small { position: absolute; right: 8px; bottom: 8px; left: 8px; color: var(--muted); text-align: center; font-size: 0.62rem; text-transform: uppercase; }
 .empty { grid-column: 1 / -1; padding: 32px; border: 1px solid var(--line); color: var(--muted); }
 .contact-strip { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 210px; padding: 34px clamp(18px, 4vw, 54px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
-.contact-strip::before { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(8, 8, 8, 0.95), rgba(8, 8, 8, 0.68) 48%, rgba(8, 8, 8, 0.72)), url('./assets/genesis-contacto.png') center / cover; content: ""; }
+.contact-strip::before { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(8, 8, 8, 0.95), rgba(8, 8, 8, 0.68) 48%, rgba(8, 8, 8, 0.72)), url('./assets/genesis-contacto.webp') center / cover; content: ""; }
 footer { display: grid; width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 38px 0 46px; place-items: center; color: var(--muted); text-align: center; }
 .footer-quote { display: grid; max-width: 980px; margin: 0; padding: 0 clamp(20px, 5vw, 56px); gap: 12px; text-wrap: balance; }
 .footer-line { display: block; }
@@ -165,7 +165,7 @@ footer { display: grid; width: min(1080px, calc(100% - 40px)); margin: 0 auto; p
   .catalog-meta { align-items: flex-start; flex-direction: column; }
   .catalog-grid { grid-template-columns: 1fr; gap: 12px; }
   .model-media { aspect-ratio: 1 / 0.72; }
-  .hero { background-image: linear-gradient(180deg, rgba(8, 8, 8, 0.94), rgba(8, 8, 8, 0.82)), url('./assets/genesis-mobile.png'); background-position: center; }
+  .hero { background-image: linear-gradient(180deg, rgba(8, 8, 8, 0.94), rgba(8, 8, 8, 0.82)), url('./assets/genesis-mobile.webp'); background-position: center; }
   footer { padding-bottom: 38px; }
   .footer-quote { padding: 0 8px; gap: 10px; }
   .seal { max-width: 100%; padding: 8px 16px 8px 11px; gap: 11px; }
