@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Génesis | Impresiones 3D</title>
+    <meta name="description" content="Explora referencias de impresion 3D y consulta tu modelo con Genesis por WhatsApp.">
+    <link rel="icon" href="./assets/genesis-icon-official.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Genesis Impresiones 3D">
+        <img class="brand-icon" src="./assets/genesis-icon-official.png" alt="">
+        <img class="brand-name" src="./assets/genesis-name-official.png" alt="Génesis">
+      </a>
+      <nav aria-label="Navegacion principal">
+        <a class="nav-link" href="#catalogo">
+          <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5.5 4.5h9.2a3.8 3.8 0 0 1 3.8 3.8v11.2H8.3a2.8 2.8 0 0 1-2.8-2.8V4.5Zm2 2v10.2a.8.8 0 0 0 .8.8h8.2V8.3a1.8 1.8 0 0 0-1.8-1.8H7.5Zm2.1 3h4.8v1.7H9.6V9.5Zm0 3.2h4.8v1.7H9.6v-1.7Z"/>
+          </svg>
+          <span data-i18n="catalog">Catalogo</span>
+        </a>
+        <a data-i18n="whatsapp" data-whatsapp href="#">WhatsApp</a>
+        <div class="language-switch" aria-label="Idioma">
+          <button type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Genesis / Impresiones 3D</p>
+          <h1><span data-i18n="heroTitle">Elegí una idea.</span><br><span data-i18n="heroTitleAccent">Nosotros le damos forma.</span></h1>
+          <p data-i18n="heroDescription">Explorá modelos de referencia, encontrá algo que te guste y enviá su ID a Genesis para cotizarlo.</p>
+          <div class="hero-actions">
+            <a class="button primary" data-i18n="viewCatalog" href="#catalogo">Ver catalogo</a>
+            <a class="button ghost" data-i18n="talkWhatsapp" data-whatsapp href="#">Hablar por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero-brand" aria-hidden="true">
+          <img class="hero-brand-full" src="./assets/genesis-logo-official-full.jpeg" alt="">
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-busy="true">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow" data-i18n="inspiration">Inspiracion para tu proximo proyecto</p>
+            <h2 data-i18n="catalogTitle">Catalogo de modelos</h2>
+          </div>
+          <span class="catalog-note" data-i18n="featuredReferences">20 referencias destacadas</span>
+        </div>
+        <div class="search-box">
+          <label data-i18n="searchLabel" for="catalog-search">Buscar un modelo</label>
+          <form class="search-row" data-search-form>
+            <input id="catalog-search" data-search data-i18n-placeholder="searchPlaceholder" type="search" placeholder="Ej: maceta, soporte celular, organizador" autocomplete="off">
+            <button class="search-button" type="submit">
+              <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M10.8 5a5.8 5.8 0 0 1 4.56 9.38l3.13 3.13-1.42 1.42-3.13-3.13A5.8 5.8 0 1 1 10.8 5Zm0 2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/>
+              </svg>
+              <span data-i18n="searchButton">Buscar</span>
+            </button>
+          </form>
+        </div>
+        <div class="catalog-meta" aria-live="polite">
+          <span data-status>Preparando catalogo</span>
+          <strong data-count>0 modelos</strong>
+        </div>
+        <section class="catalog-grid" data-catalog></section>
+        <nav class="pagination" data-pagination aria-label="Navegacion del catalogo"></nav>
+      </section>
+
+      <section class="contact-strip">
+        <div>
+          <p class="eyebrow" data-i18n="ownIdea">¿Tenés una idea propia?</p>
+          <h2 data-i18n="sendReference">Mandanos una imagen o referencia.</h2>
+        </div>
+        <a class="button primary" data-i18n="consultGenesis" data-whatsapp href="#">Consultar con Genesis</a>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer-quote">
+        <span class="footer-line footer-line-primary">
+          <span data-i18n="footerSpark">✨ Donde una</span>
+          <strong data-i18n="footerIdea">idea</strong>
+          <span data-i18n="footerShape">encuentra forma, nace una</span>
+          <strong data-i18n="footerPiece">pieza única.</strong>
+        </span>
+        <span class="footer-line footer-line-secondary" data-i18n="footerClose">Crear también es imaginar lo que todavía no existe. 🚀</span>
+      </p>
+    </footer>
+
+    <script type="module" src="./src/i18n.js"></script>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
